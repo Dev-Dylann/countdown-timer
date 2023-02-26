@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --BODYBG: #9BAFD9;
+    --TEXTCOLOR: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --BODYBG: #101046;
+        --TEXTCOLOR: whitesmoke;
+    }
+}
+
+form,
+input,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Montserrat, sans-serif;
+    background-color: var(--BODYBG);
+    color: var(--TEXTCOLOR);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont {
+    width: 80%;
+    height: 80vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.countdown-target {
+    text-align: center;
+    font-weight: bold;
+}
+
+.countdown {
+    width: 100%;
+    height: max-content;
+    padding: 25px 15px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
+.countdown__days {
+    width: 100%;
+    font-size: 2.5em;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.countdown__hrs,
+.countdown__min,
+.countdown__sec {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown__daysnum {
+    font-weight: bold;
+}
+
+.countdown__hrsnum,
+.countdown__minnum,
+.countdown__secnum {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.set-date {
+    display: flex;
+    width: 80%;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
+.set-date__time,
+.set-date__date {
+    border: 2px solid black;
+    border-radius: 7px;
+    height: 35px;
+    padding-inline: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.set-date__start,
+.set-date__reset {
+    height: 35px;
+    padding-inline: 15px;
+    border: 2px solid black;
+    border-radius: 7px;
+    background-color: whitesmoke;
+}
+
+@media screen and (min-width: 426px) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    .countdown-target {
+        width: 80%;
+    }
+
+    .countdown {
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    .set-date__date,
+    .set-date__time,
+    .set-date__reset,
+    .set-date__start {
+        height: 45px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    body {
+        font-size: 1.25rem;
+    }
+
+    .cont {
+        height: min(75vh, 600px);
+
+        display: grid;
+        place-content: center;
+        grid-template-columns: 2fr 1fr;
+        grid-auto-rows: 100px 300px;
+        column-gap: 20px;
+    }
+
+    .countdown-target {
+        grid-area: 1 / 1 / 2 / 2;
+        text-align: left;
+        align-self: flex-end;
+    }
+
+    .countdown {
+        grid-area: 2 / 1 / 3 / 2;
+        width: 100%;
+        column-gap: 40px;
+        justify-content: flex-start;
+    }
+
+    .countdown__days {
+        justify-content: flex-start;
+        padding-inline: 15px;
+        font-size: 4em;
+        gap: 20px;
+    }
+
+    .countdown__hrs,
+    .countdown__min,
+    .countdown__sec {
+        font-size: 1.75em;
+    }
+
+    .set-date {
+        width: 100%;
+        grid-area: 2 / 2 / 3 / 3;
+        align-self: flex-end;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .set-date__start,
+    .set-date__reset {
+        height: 45px;
+    }
+}
