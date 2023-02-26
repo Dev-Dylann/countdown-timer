@@ -4,6 +4,8 @@
 
 Simple app that counts down to any time specified by the user.
 
+View[Live Site](https://dev-dylann.github.io/countdown-timer/)
+
 ## Features
 
 - Continues to countdown even when the window is minimized or closed
