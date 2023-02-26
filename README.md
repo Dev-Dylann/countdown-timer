@@ -4,7 +4,7 @@
 
 Simple app that counts down to any time specified by the user.
 
-View[Live Site](https://dev-dylann.github.io/countdown-timer/)
+View [Live Site](https://dev-dylann.github.io/countdown-timer/)
 
 ## Features
 
